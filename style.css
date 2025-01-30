@@ -1,0 +1,300 @@
+/* Style général du menu */
+.menu {
+	background-color: rgba(120, 180, 210, 0.7); /* Fond bleu avec 70% de transparence avant 0.35 */
+    display: flex; /* Aligne les enfants horizontalement */
+    align-items: flex-start; /* Aligner les éléments en haut */
+    padding: 10px 20px; /* Espace à gauche et à droite */
+	color: white;
+}
+
+/* Logo */
+.menu .logo img {
+    height: 80px; /* Hauteur de l'image (ajuste selon tes besoins) */
+    margin-right: 20px; /* Espacement entre le logo et le menu */
+}
+
+/* Conteneur pour le nom et le menu */
+.menu-container {
+    display: flex;
+    flex-direction: column; /* Empile le titre au-dessus du menu */
+}
+
+/* Nom du site */
+.site-name {
+    font-size: 30px; /* Taille du titre */
+    margin: 0; /* Aucun espace autour */
+	margin-bottom: 5px; /* Ajoute un petit espace uniquement en dessous */
+    padding: 0;
+    color: white;
+    font-weight: bold;
+}
+
+.menu ul {
+    list-style-type: none; /* Supprime les puces */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Dispose les éléments horizontalement */
+	position: relative; /* Assure que les sous-menus sont positionnés par rapport au parent */
+}
+
+.menu ul li {
+    position: relative; /* Nécessaire pour le positionnement des sous-menus */
+}
+
+.menu ul li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white; /* Couleur du texte */
+    font-weight: bold;
+}
+
+.menu ul li a:hover {
+	text-decoration: underline; /* Ajoute un soulignement */
+    color: #d3d3d3; /* Texte devient gris clair */
+}
+
+/* Sous-menu (caché par défaut) */
+.menu ul li ul {
+    display: none; /* Cache les sous-menus */
+    position: absolute; /* Place le sous-menu sous le parent */
+    top: 100%; /* Place le sous-menu immédiatement sous le parent */
+    left: 0; /* Aligne le sous-menu à gauche du parent */
+    background-color: rgba(0, 0, 80, 1); /* Fond bleu transparent légèrement plus opaque */
+    padding: 0;
+	z-index: 10;/*permet de garder les sous-menus ouvert lorsque je rentre dans le overlay-container*/
+}
+/* Liens dans les sous-menus */
+.menu ul li ul li a {
+    padding: 10px 20px;
+    color: white;
+	text-decoration: none;
+    font-weight: normal;
+}
+
+/* Affichage du sous-menu au survol */
+.menu ul li:hover ul {
+    display: block; /* Affiche le sous-menu */
+}
+
+/* Effet lumineux pour tout l'encadré au survol */
+.menu ul li ul li:hover {
+    background-color: rgba(0, 0, 150, 1); /* Fond bleu encore plus opaque et brillant */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Renforce l'ombre */
+}
+
+/* Couleur au survol des sous-menus */
+.menu ul li ul li a:hover {
+	color: #d3d3d3; /* Texte devient gris clair */
+}
+
+/* Appliquer une image de fond à tout le body */
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url("images/images_fond/fond_index.jpg");
+	background-size: cover; /* L'image couvre tout l'écran */
+	background-position: center; /* Centrer l'image */
+	background-attachment: fixed; /* L'image reste fixe au défilement */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+	height: 100vh; /* Hauteur de la page = hauteur de l'écran */
+}
+
+/* Zone noire transparente avec marge */
+.overlay-container {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond noir avec 50% de transparence */
+    padding: 20px; /* Marge intérieure (espacement entre la zone et le contenu) */
+    margin-left: 100px; /* Marge de 100px à gauche de l'image */
+    margin-right: 100px; /* Marge de 100px à droite de l'image */
+	border-radius: 10px;
+    z-index: 1; /* Inférieur au menu */
+}
+
+/* Conteneur du titre et de la date */
+.header-title {
+    display: flex;
+    justify-content: space-between; /* Date à droite, titre à gauche */
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 5px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style de la date */
+.last-modified {
+    font-size: 14px;
+    color: #bbb; /* Gris clair pour discrétion */
+}
+
+/* Style du titre */
+.titre-page {
+    font-size: 40px;
+	color: white;
+    margin: 0;
+}
+
+/* Conteneur du sommaire */
+.sommaire-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Fond sombre semi-transparent */
+    border: 1px solid #444;
+    border-radius: 8px;
+    width: 250px;
+    padding: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Style de l'en-tête (titre + masquer) */
+.sommaire-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Icône du menu */
+.icon {
+    margin-right: 5px;
+}
+
+/* Style des liens */
+.sommaire a {
+    text-decoration: none;
+    color: white;
+	font-weight: bold;
+    display: block;
+    padding: 3px 0;
+}
+
+.sommaire a:hover {
+    color: #00bfff;
+}
+
+/* Liste */
+.sommaire ul {
+    list-style: none;
+    padding-left: 10px;
+    margin: 0;
+}
+
+/* Sous-listes */
+.sommaire ul ul {
+    padding-left: 15px;
+    font-size: 13px;
+}
+
+/* Ajouter [masquer] / [afficher] dynamiquement */
+.sommaire-header::after {
+    content: " [masquer]";
+    font-size: 14px;
+    color: #00bfff;
+}
+
+details:not([open]) .sommaire-header::after {
+    content: " [afficher]";
+}
+
+h2::before, h3::before {
+  content: ""; /* Vide mais utilisé pour insérer une forme */
+  display: inline-block; /* Afficher en ligne avec le texte */
+  width: 15px; /* Largeur de la sphère */
+  height: 15px; /* Hauteur de la sphère */
+  background-color: #ffffff	; /* blanc pour la sphère */
+  border-radius: 50%; /* Créer une forme circulaire (sphère) */
+  margin-right: 10px; /* Espacement entre la sphère et le titre */
+  vertical-align: middle; /* Alignement vertical avec le texte */
+}
+
+
+h2{
+	font-size: 22px; /* Taille du texte */
+	color: #ffffff; /* blanc pour une meilleure lisibilité */
+	font-weight: bold;
+	margin-bottom: 0; /* Élimine l'espace par défaut sous le titre */
+	
+}
+
+h3{
+	font-size: 20px; /* Taille du texte */
+	color: #ffffff; /* blanc pour une meilleure lisibilité */
+	font-weight: bold;
+}
+
+p {
+    font-size: 18px; /* Taille du texte */
+    line-height: 1.0; /* Espacement entre les lignes */
+    color: #ffffff; /* blanc pour une meilleure lisibilité */
+    font-family: 'Montserrat', sans-serif; /* Police de caractères */
+    text-align: justify; /* Justifie le texte */
+}
+
+p a {
+    color: #00bfff; /* Bleu */
+    text-decoration: none; /* Supprime le soulignement */
+    font-weight: bold; /* Met en gras */
+}
+
+p a:hover {
+    color: #66d9ff; /* Rouge au survol */
+    text-decoration: underline; /* Ajoute un soulignement */
+}
+
+.style-hr{
+	border: none; /* Supprime la bordure par défaut */
+	border-top: 2px solid #808080; /* Ajoute une bordure de couleur et d'épaisseur */
+	margin: 3px 0; /* Ajoute un petit espace au-dessus et en dessous de la ligne */
+}
+
+/* Style général du tableau */
+.style-table {
+    width: 100%; /* Largeur de 100% */
+    border-collapse: collapse; /* Supprime l'espace entre les bordures */
+    margin: 10px 0; /* Ajoute une marge au-dessus et en dessous */
+    font-size: 18px;
+    text-align: center; /* Alignement du texte */
+}
+
+/* Bordures et fond des cellules */
+.style-table th, 
+.style-table td {
+    border: 2px solid #dddddd; /* Bordure grise */
+    padding: 12px; /* Espacement intérieur */
+	font-size: 16px; /* Taille du texte */
+	color: #ffffff; /* blanc pour une meilleure lisibilité */
+	font-family: 'Montserrat', sans-serif; /* Police de caractères */
+	font-weight: bold;
+}
+
+/* Style des en-têtes */
+.style-table thead {
+    background-color: rgba(52, 152, 219, 0.6)  /* 60% d'opacité */; /* Bleu */
+    color: #ffffff; /* Texte blanc */
+    font-weight: bold;
+}
+
+.style-table tbody {
+    background-color: rgba(0, 0, 0, 0.55); /* Fond noir avec 50% de transparence */
+}
+
+
+/* Style global du footer */
+.footer {
+    background-color: #333; /* Fond sombre */
+    color: white; /* Texte blanc */
+    padding: 20px 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Bas du footer */
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #555;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
