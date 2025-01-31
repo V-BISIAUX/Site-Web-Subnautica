@@ -3,87 +3,134 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="author" content="Bisiaux Valentin">
-	<title>Subnautica</title>
+	<title>L'encyclopédie Subnautica | Acceuil</title>
 	<meta name="description" content="Bienvenue sur mon encyclopédie de Subautica, découvrez nos sections informatives et interactives.">
 	<meta name="keywords" content="Subnautica, encyclopédie, faune, flore, carte, biomes">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Police d'écriture Montserrat -->
+	<link rel="stylesheet" href="style.css">
 	<!-- Favicon -->
     <link rel="icon" type="image/png" href="images/icon.png">
 </head>
 
-<body>
+<body class="index-body">
 	<!-- En-tête de la page -->
 	<header>
-		<h1>L'Encyclopédie Subnautica</h1>
-		<br>
-		<p>Date de dernière mise à jour : 23/01/2025</p>
-		<br>
-		
-		<!-- Logo -->
-		<div id="logo-container" style="display: flex; align-items: center;">
-            <img src="images/logo_subnautica.jpg" alt="Logo du site">
-        </div>
-		<br>
-		<strong>Sommaire :</strong>
-		<!-- Navigation -->
-		<nav>
-			<ul>
-				<li><a href="#section1">Introduction</a>
-					<ul>
-						<li><a href="#souspartie1.1">Résumé de Subnautica</a></li>
-                        <li><a href="#souspartie1.2">Bande Annonce</a></li>
-					</ul>
-				</li>
-				<li><a href="#section2">Navigation</a></li>
-			</ul>
+		<nav class="menu">
+			 <!-- Lien vers la page d'accueil avec une image -->
+			<a href="index.html" class="logo">
+				<img src="images/images_faune/Peeper_Fauna.webp" alt="Logo du site">
+			</a>
+			<!-- Texte à afficher dans le menu -->
+			<div class="menu-container">
+				<span class="site-name">L'encyclopédie Subnautica</span>
+			
+				<ul>
+					<li><a href="index.html">Acceuil</a>
+						<ul>
+							<li><a href="index.html#intro">Introduction</a></li>
+							<li><a href="index.html#navigation_générale">Navigation</a></li>
+						</ul>
+					</li>
+					<li><a href="Carte_biomes.html">Monde</a>
+						<ul>
+							<li><a href="Carte_biomes.html">Carte/Biomes</a></li>
+							<li><a href="faune.html">Faune</a></li>
+							<li><a href="flore.html">Flore</a></li>
+						</ul>
+					</li>
+					<li><a href="histoire.html">histoire</a></li>
+				</ul>
+			</div>
 		</nav>
-		<hr>
 	</header>
 	
-	<!-- Contenu principal -->
-	<main>
-		<section id ="section1">
-			<h2 id="intro">Introduction au monde de Subnautica</h2>
-			<p>Bienvenue sur l'Encyclopédie Subnautica, un site d'un fan francophone dédié au jeu éponyme développé par Unknown Worlds Entertainment. <br>
-			   (de future mises à jour et modifications viendront améliorer et compléter cette encyclopédie)</p>
-			
-			<!-- Sous-partie 1 -->
-			<article id ="souspartie1.1">
-				<h3>Résumé de Subnautica</h3>
-				<p>Subnautica est un jeu d'aventure et de survie en monde ouvert permettant d'incarne un survivant du crash d’un vaisseau spatial, l’Aurora, échoué sur une planète océanique extraterrestre, connue sous le nom de 4546B. 
-				 Entouré d'un écosystème aquatique foisonnant, à la fois fascinant et dangereux, il doit explorer les profondeurs pour trouver des ressources, construire des bases sous-marines, et développer de l’équipement avancé. 
-				 L’objectif principal est de survivre en gérant faim, soif et oxygène, tout en découvrant les mystères de la planète, notamment l'origine d'une infection qui menace la faune locale. 
-				 Au fil de l’aventure, le joueur dévoile les secrets d’une ancienne civilisation et cherche un moyen de s’échapper de ce monde aquatique. 
-				 Entre exploration de biomes variés – récifs coralliens colorés, grottes abyssales et zones volcaniques – 
-				 et rencontres avec des créatures marines majestueuses ou terrifiantes, Subnautica propose une expérience immersive qui mêle émerveillement, tension et exploration scientifique.</p>
-			</article>
-			
-			<!-- Sous-partie 2 -->
-			<article id="souspartie1.2">
-				<h3>Bande Annonce</h3>
-				<!-- Vidéo -->
-                <video width="600" controls>
-                    <source src="vidéos/Bande_annonce.mp4" type="video/mp4">
-                </video>
-			</article>
-		</section>
-			
-		<section id="section2">
-			<h2 id="navigation_générale">Navigation</h2>
-			<!-- Sommaire de la section 2 -->
-            <nav>
-                <ul>
-                    <li><a href="Carte_biomes.html">Carte du cratère et biomes</a></li>
-                    <li><a href="faune.html">Faune</a></li>
-                    <li><a href="flore.html">Flore</a></li>
-                </ul>
-            </nav>
-		</section>
-	</main>
+	<div class="overlay-container">
+		<!-- Contenu principal -->
+		<main>
+			<!-- Conteneur pour le titre et la date -->
+			<div class="header-title">
+				<h1 class="titre-page">Acceuil</h1>
+				<span class="last-modified">Dernière modification : 31 janvier 2025</span>
+			</div>
+			<p>Bienvenue sur <strong>l'Encyclopédie Subnautica</strong>, un site d'un fan francophone dédié au jeu éponyme développé par <strong>Unknown Worlds Entertainment</strong>. </p>
+			<p>(de future mises à jour et modifications viendront améliorer et compléter cette encyclopédie)</p>
+			<div class="image-container">
+				<img src="images/logo_acceuil.jpg" alt="Carte de Subnautica">
+			</div>
+			<!-- Sommaire -->
+			<details class="sommaire-container" open>
+				<summary class="sommaire-header">
+					<span class="icon">☰</span> <strong>Sommaire</strong>
+				</summary>
+				<nav class="sommaire">
+					<ul>
+						<li><a href="#section1"><strong>1. Introduction</strong></a>
+							<ul>
+								<li><a href="#souspartie1">1.1. Résumé de Subnautica</a></li>
+								<li><a href="#souspartie2">1.2. Bande Annonce</a></li>
+							</ul>
+						</li>
+						<li><a href="#section2"><strong>2. Navigation</strong></a></li>
+					</ul>
+				</nav>
+			</details>
+			<section id ="section1">
+				<h2 id="intro">Introduction au monde de Subnautica</h2>
+				<hr class="style-hr">
+				<p><strong>Subnautica</strong> a été créé par <strong>Unknown Worlds Entertainment</strong>, un studio indépendant basé à San Francisco, connu pour ses précédents travaux sur des jeux comme Natural Selection. 
+				   Le développement de <strong>Subnautica</strong> a commencé en 2013, avec une équipe relativement petite, et le jeu a été lancé en accès anticipé en 2014</p>
+				<p>Cette phase a permis aux développeurs de recevoir des retours de la communauté et d'affiner progressivement les mécaniques de jeu, les graphismes et l'expérience de survie sous-marine</p>
+				
+				<!-- Sous-partie 1 -->
+				<article id ="souspartie1.1">
+					<h3>Résumé de Subnautica</h3>
+					<p><strong>Subnautica</strong> est un jeu d'aventure et de survie en monde ouvert permettant d'incarne un survivant du crash d’un vaisseau spatial, l’Aurora, échoué sur une planète océanique extraterrestre, connue sous le nom de 
+					 Entouré d'un écosystème aquatique foisonnant, à la fois fascinant et dangereux, il doit explorer les profondeurs pour trouver des ressources, construire des bases sous-marines, et développer de l’équipement avancé.</p> 
+					 <p>L’objectif principal est de survivre en gérant faim, soif et oxygène, tout en découvrant les mystères de la planète, notamment l'origine d'une infection qui menace la faune locale. 
+					 Au fil de l’aventure, le joueur dévoile les secrets d’une ancienne civilisation et cherche un moyen de s’échapper de ce monde aquatique. 
+					 Entre exploration de biomes variés – récifs coralliens colorés, grottes abyssales et zones volcaniques – 
+					 et rencontres avec des créatures marines majestueuses ou terrifiantes, <strong>Subnautica</strong> propose une expérience immersive qui mêle émerveillement, tension et exploration scientifique.</p>
+				</article>
+				
+				<!-- Sous-partie 2 -->
+				<article id="souspartie1.2">
+					<h3>Bande Annonce</h3>
+					<!-- Vidéo -->
+					<video class="video" width="600" controls>
+						<source src="vidéos/Bande_annonce.mp4" type="video/mp4">
+					</video>
+				</article>
+			</section>
+				
+			<section id="section2">
+				<h2 id="navigation_générale">Navigation</h2>
+				<hr class="style-hr">
+				<!-- Sommaire de la section 2 -->
+				 <div class="navigation-container">
+					<div class="navigation-colonne">
+						<span class="menu-title">Monde</span>
+						<ul>
+							<li><a href="Carte_biomes.html">Carte du cratère et biomes</a></li>
+							<li><a href="faune.html">Faune</a></li>
+							<li><a href="flore.html">Flore</a></li>
+						</ul>
+					</div>
+					
+					<div class="navigation-colonne">
+						<span class="menu-title">Histoire</span>
+						<ul>
+							<li><a href="Carte_biomes.html">Histoire de la planète</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
 	
 	<!-- Pied de page -->
-    <footer>
-		<br><br><br><br>
-        <p>&copy; L'Encyclopédie Subnautica. Tous droits réservés.</p>
+    <footer class="footer">
+		<p class="footer-top">Créé par Valentin BISIAUX</p>
+		<p class="footer-bottom">&copy; 2025 - L'Encyclopédie Subnautica. Tous droits réservés.</p>
     </footer>
 </body>
 </html>

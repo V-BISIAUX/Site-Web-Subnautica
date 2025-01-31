@@ -3,7 +3,7 @@
 	background-color: rgba(120, 180, 210, 0.7); /* Fond bleu avec 70% de transparence avant 0.35 */
     display: flex; /* Aligne les enfants horizontalement */
     align-items: flex-start; /* Aligner les éléments en haut */
-    padding: 10px 20px; /* Espace à gauche et à droite */
+    padding: 10px 20px; /* Espace interne*/
 	color: white;
 }
 
@@ -60,7 +60,7 @@
     position: absolute; /* Place le sous-menu sous le parent */
     top: 100%; /* Place le sous-menu immédiatement sous le parent */
     left: 0; /* Aligne le sous-menu à gauche du parent */
-    background-color: rgba(0, 0, 80, 1); /* Fond bleu transparent légèrement plus opaque */
+    background-color: rgba(20, 40, 60, 1);
     padding: 0;
 	z-index: 10;/*permet de garder les sous-menus ouvert lorsque je rentre dans le overlay-container*/
 }
@@ -79,20 +79,52 @@
 
 /* Effet lumineux pour tout l'encadré au survol */
 .menu ul li ul li:hover {
-    background-color: rgba(0, 0, 150, 1); /* Fond bleu encore plus opaque et brillant */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Renforce l'ombre */
+    background-color: rgba(30, 70, 100, 1); /* Fond bleu plus brillant */
 }
 
 /* Couleur au survol des sous-menus */
 .menu ul li ul li a:hover {
-	color: #d3d3d3; /* Texte devient gris clair */
+	color: #d3d3d3; /* Texte devient gris*/
 }
 
 /* Appliquer une image de fond à tout le body */
-body {
+.index-body {
 	margin: 0;
 	padding: 0;
 	background-image: url("images/images_fond/fond_index.jpg");
+	background-size: cover; /* L'image couvre tout l'écran */
+	background-position: center; /* Centrer l'image */
+	background-attachment: fixed; /* L'image reste fixe au défilement */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+	height: 100vh; /* Hauteur de la page = hauteur de l'écran */
+}
+
+.carte-body {
+	margin: 0;
+	padding: 0;
+	background-image: url("images/images_fond/fond_biomes.webp");
+	background-size: cover; /* L'image couvre tout l'écran */
+	background-position: center; /* Centrer l'image */
+	background-attachment: fixed; /* L'image reste fixe au défilement */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+	height: 100vh; /* Hauteur de la page = hauteur de l'écran */
+}
+
+.faune-body {
+	margin: 0;
+	padding: 0;
+	background-image: url("images/images_fond/fond_faune.jpg");
+	background-size: cover; /* L'image couvre tout l'écran */
+	background-position: center; /* Centrer l'image */
+	background-attachment: fixed; /* L'image reste fixe au défilement */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+	height: 100vh; /* Hauteur de la page = hauteur de l'écran */
+}
+
+.flore-body {
+	margin: 0;
+	padding: 0;
+	background-image: url("images/images_fond/fond_flore.jpg");
 	background-size: cover; /* L'image couvre tout l'écran */
 	background-position: center; /* Centrer l'image */
 	background-attachment: fixed; /* L'image reste fixe au défilement */
@@ -129,68 +161,84 @@ body {
 
 /* Style du titre */
 .titre-page {
-    font-size: 40px;
+    font-size: 32px;
 	color: white;
     margin: 0;
+}
+
+/* Conteneur de l'image */
+.image-container {
+    display: flex;
+    justify-content: center; /* Centrer l'image horizontalement */
+    margin-top: 20px;
+	margin-bottom: 30px; /* Ajoute un espace en bas de l'image */
+}
+
+/* Style de l'image */
+.image-container img {
+    width: 80%; /* L'image occupe 80% de la largeur de son conteneur */
+    max-width: 600px; /* Taille maximale de l'image */
+    height: auto; /* Laisser l'image garder ses proportions */
+    border-radius: 8px; /* Arrondir les coins de l'image */
 }
 
 /* Conteneur du sommaire */
 .sommaire-container {
     background-color: rgba(0, 0, 0, 0.8); /* Fond sombre semi-transparent */
-    border: 1px solid #444;
-    border-radius: 8px;
-    width: 250px;
-    padding: 10px;
-    color: white;
-    font-family: Arial, sans-serif;
+    border: 1px solid #444; /* Bordure grise foncée */
+    border-radius: 8px; /* Coins arrondis avec un rayon de 8px */
+    width: 250px; /* Largeur du conteneur de 250px */
+    padding: 10px; /* Espacement interne de 10px */
+    color: white; /* Couleur du texte blanche */
+    font-family: Arial, sans-serif; /* Police Arial avec une alternative sans-serif */
 }
 
 /* Style de l'en-tête (titre + masquer) */
 .sommaire-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 5px;
-    cursor: pointer;
+    justify-content: space-between; /* Espacement égal entre les éléments enfants */
+    align-items: center; /* Alignement des éléments enfants au centre verticalement */
+    font-size: 19px; /* Taille de police de 16px pour l'en-tête */
+    font-weight: bold; /* Texte en gras */
+    padding: 5px; /* Espacement interne de 5px */
+    cursor: pointer; /* Changement du curseur pour indiquer que l'élément est cliquable */
 }
 
 /* Icône du menu */
 .icon {
-    margin-right: 5px;
+    margin-right: 5px; /* Marge à droite de l'icône pour l'espacement */
 }
 
 /* Style des liens */
 .sommaire a {
-    text-decoration: none;
-    color: white;
-	font-weight: bold;
-    display: block;
-    padding: 3px 0;
+    text-decoration: none; /* Suppression de la décoration de texte (pas de soulignement) */
+    color: white; /* Couleur du texte des liens en blanc */
+    display: block; /* Affichage des liens comme blocs (prend toute la largeur) */
+    padding: 5px 0; /* Espacement vertical de 5px */	
 }
 
 .sommaire a:hover {
-    color: #00bfff;
+    color: #00bfff; /* Changement de couleur du texte au survol (bleu clair) */
 }
 
 /* Liste */
 .sommaire ul {
-    list-style: none;
-    padding-left: 10px;
-    margin: 0;
+    list-style: none; /* Suppression des puces de liste */
+	font-size: 18px;
+    padding-left: 10px; /* Espacement interne à gauche de 10px */
+    margin: 0; /* Suppression de la marge par défaut */
 }
 
 /* Sous-listes */
 .sommaire ul ul {
-    padding-left: 15px;
-    font-size: 13px;
+    padding-left: 15px; /* Espacement supplémentaire à gauche pour les sous-listes */
+    font-size: 16px; /* Taille de la police réduite à 16px pour les sous-listes */
 }
 
 /* Ajouter [masquer] / [afficher] dynamiquement */
 .sommaire-header::after {
     content: " [masquer]";
-    font-size: 14px;
+    font-size: 13px;
     color: #00bfff;
 }
 
@@ -215,6 +263,7 @@ h2{
 	color: #ffffff; /* blanc pour une meilleure lisibilité */
 	font-weight: bold;
 	margin-bottom: 0; /* Élimine l'espace par défaut sous le titre */
+	font-family: 'Montserrat', sans-serif; /* Police de caractères */
 	
 }
 
@@ -222,14 +271,17 @@ h3{
 	font-size: 20px; /* Taille du texte */
 	color: #ffffff; /* blanc pour une meilleure lisibilité */
 	font-weight: bold;
+	font-family: 'Montserrat', sans-serif; /* Police de caractères */
 }
 
 p {
     font-size: 18px; /* Taille du texte */
-    line-height: 1.0; /* Espacement entre les lignes */
+    line-height: 1.3; /* Espacement entre les lignes */
     color: #ffffff; /* blanc pour une meilleure lisibilité */
     font-family: 'Montserrat', sans-serif; /* Police de caractères */
-    text-align: justify; /* Justifie le texte */
+	font-weight: normal;
+    text-align: justify;
+
 }
 
 p a {
@@ -239,7 +291,7 @@ p a {
 }
 
 p a:hover {
-    color: #66d9ff; /* Rouge au survol */
+    color: #66d9ff;
     text-decoration: underline; /* Ajoute un soulignement */
 }
 
@@ -277,24 +329,92 @@ p a:hover {
 }
 
 .style-table tbody {
-    background-color: rgba(0, 0, 0, 0.55); /* Fond noir avec 50% de transparence */
+    background-color: rgba(0, 0, 0, 0.55); /* Fond noir avec 55% de transparence */
 }
 
+.video {
+  display: block; /* La balise video est en mode "inline" par défaut, on la met en bloc */
+  margin: 0 auto; /* Centre la vidéo horizontalement */
+}
+
+.navigation-container {
+    display: flex;
+    padding-top: 8px;
+}
+
+.navigation-colonne {
+    margin: 0 10px;
+	padding: 20px;
+}
+
+.menu-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+	color: #ffffff; /* Texte blanc */
+	font-family: 'Montserrat', sans-serif; /* Police de caractères */
+    display: block; /* Pour s'assurer que ça s'affiche comme un titre */
+}
+
+.navigation-colonne ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation-colonne li {
+    margin: 5px 0;
+}
+
+.navigation-colonne a {
+    text-decoration: none;
+	font-family: 'Montserrat', sans-serif; /* Police de caractères */
+	font-weight: normal;
+    color: #00bfff; 
+}
+
+.navigation-colonne a:hover {
+    color: #66d9ff;
+	text-decoration: underline; /* Ajoute un soulignement */
+}
+
+.navigation-colonne a::before{
+	content: ""; /* Vide mais utilisé pour insérer une forme */
+	display: inline-block; /* Afficher en ligne avec le texte */
+	width: 5px; /* Largeur de la sphère */
+	height: 5px; /* Hauteur de la sphère */
+	background-color: #ffffff	; /* blanc pour la sphère */
+	border-radius: 50%; /* Créer une forme circulaire (sphère) */
+	margin-right: 10px; /* Espacement entre la sphère et le titre */
+	vertical-align: middle; /* Alignement vertical avec le texte */
+}
 
 /* Style global du footer */
 .footer {
     background-color: #333; /* Fond sombre */
-    color: white; /* Texte blanc */
     padding: 20px 10px;
-    font-family: Arial, sans-serif;
+}
+
+/* Haut du footer */
+.footer-top {
+	text-align: center;
+	font-size: 14px;
+    color: #aaa;
 }
 
 /* Bas du footer */
 .footer-bottom {
     text-align: center;
-    padding-top: 15px;
+    padding-top: 20px;
     border-top: 1px solid #555;
     margin-top: 20px;
     font-size: 14px;
     color: #aaa;
+}
+
+.footer-page-non-pleine{
+	background-color: #333; /* Fond sombre */
+    padding: 20px 10px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }

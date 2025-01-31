@@ -3,207 +3,256 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="author" content="Bisiaux Valentin">
-	<title>Subnautica</title>
+	<title>L'encyclopédie Subnautica | Flore</title>
 	<meta name="description" content="Bienvenue sur mon encyclopédie de Subautica, découvrez la flore qui constituent ce jeu.">
 	<meta name="keywords" content="Subnautica, encyclopédie, faune, flore, carte, biomes">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Police d'écriture Montserrat -->
+	<link rel="stylesheet" href="style.css">
 	<!-- Favicon -->
     <link rel="icon" type="image/png" href="images/icon.png">
 </head>
 
-<body>
+<body class="flore-body">
 	<!-- En-tête de la page -->
 	<header>
-		<h1>La Flore</h1>
-		<p><a href="index.html">Accueil</a> </p>
-		<p>Date de dernière mise à jour : 23/01/2025</p>
-		<p>La <strong>Flore</strong> de Subnautica regroupe toutes les plantes natives des <a href="Carte_biomes.html">Biomes</a> de la planète 4546B. 
-		   La majorité d'entre elles sont des formes de vie immobiles, restant ancrées à la même place. <br>
-		   Le joueur peut scanner la flore à l'aide du Scanner pour obtenir des informations à propos des plantes dans son PDA.</p>
-		<strong>Sommaire :</strong>
-		<!-- Navigation -->
-		<nav>
-			<ul>
-				<li><a href="#section1">Répertoire de la flore</a>
-					<ul>
-						<li><a href="#souspartie1">Flore Aquatique</a></li>
-                        <li><a href="#souspartie2">Flore Terrestre</a></li>
-						<li><a href="#souspartie3">Flore non exploitable</a></li>
-					</ul>
-				</li>
-			</ul>
+		<nav class="menu">
+			 <!-- Lien vers la page d'accueil avec une image -->
+			<a href="index.html" class="logo">
+				<img src="images/images_faune/Peeper_Fauna.webp" alt="Logo du site">
+			</a>
+			<!-- Texte à afficher dans le menu -->
+			<div class="menu-container">
+				<span class="site-name">L'encyclopédie Subnautica</span>
+			
+				<ul>
+					<li><a href="index.html">Acceuil</a>
+						<ul>
+							<li><a href="index.html#intro">Introduction</a></li>
+							<li><a href="index.html#navigation_générale">Navigation</a></li>
+						</ul>
+					</li>
+					<li><a href="Carte_biomes.html">Monde</a>
+						<ul>
+							<li><a href="Carte_biomes.html">Carte/Biomes</a></li>
+							<li><a href="faune.html">Faune</a></li>
+							<li><a href="flore.html">Flore</a></li>
+						</ul>
+					</li>
+					<li><a href="histoire.html">histoire</a></li>
+				</ul>
+			</div>
 		</nav>
-		<hr>
 	</header>
 	
-	<!-- Contenu principal -->
-	<main>
-		<section id ="section1">
-			<h2>Répertoire de la flore</h2>
-			<p>Bien que la majorité des plantes soient passives ou défensives, il existe certaines exceptions qui constituent un danger pour le joueur, pouvant lui infliger des dégâts à leur contact ou dans un certain rayon d'action. 
-			   La plupart des plantes peuvent être récoltées, cueillies ou cultivées. Certaines servent également de source de nourriture et d’eau.</p>
-			<p>Voici une liste de la flore que vous pourriez rencontrer en explorant les <a href="Carte_biomes.html">Biomes</a> et leur <a href="faune.html">faune</a> dans Subnautica</p>
-			
-			<!-- Sous-partie 1 -->
-			<article id ="souspartie1">
-				<h3>Flore Aquatique</h3>
-				<table border="1">
-					<tr>
-						<th>Flore</th>
-						<th>Biome</th>
-						<th>Commentaire</th>
-					</tr>
-					<tr>
-						<td><img src="images/images_flore/Acid_Mushroom_Flora.webp" alt="Champignon acide"><br>
-							Champignon acide</td>
-						<td>Bancs Calmes <br>
-							Plateaux Herbeux <br>
-							Grottes des Plateaux Herbeux <br>
-							Forêts des Arbres‑Champignons <br>
-							Dunes <br>
-							Grottes des Dunes</td>
-						<td>Projette de l'acide quand on utilise un couteau, peut être cueilli ou coupé pour obtenir un spore de champignon acide</td>
-					</tr>
-					<tr>
-						<td><img src="images/images_flore/Regress_Shell_Flora.webp" alt="Cornet rouge"><br>
-							Cornet rouge</td>
-						<td>Récifs Clairsemés <br>
-							Abysse des Récifs Clairsemés <br>
-							Grottes des Plateaux Herbeux <br>
-							Cavernes des Pèlerins des Mers <br>
-							Grottes des Montagnes</td>
-						<td>Décor, donne la graine de Cornet Rouge</td>
-					</tr>
-					<tr>
-						<td><img src="images/images_flore/Sea_Crown_Flora.webp" alt="Couronne de mer"><br>
-							Couronne de mer</td>
-						<td>Forêt des Pompons <br>
-							Grottes des Plateaux Herbeux <br>
-							Dunes <br>
-							Grottes des Dunes</td>
-						<td>Décor, donne la graine de couronne de mer</td>
-					</tr>
-					<tr>
-						<td><img src="images/images_flore/Ghost_Weed_Flora.webp" alt="Herbe fantôme"><br>
-							Herbe fantôme</td>
-						<td>Forêts des Algues Sanguines <br>
-							Rivière Perdue <br>
-							Grottes du Champ d'ossements</td>
-						<td>Décor, donne la graine d'herbe fantôme</td>
-					</tr>
-					<tr>
-						<td><img src="images/images_flore/Tiger_Plant_Flora.webp" alt="Plante tigre"><br>
-							Plante tigre</td>
-						<td>Plateaux Herbeux <br>
-							Grottes des Plateaux Herbeux <br>
-							Récifs Clairsemés <br>
-							Abysse des Récifs Clairsemés <br>
-							Escarpements rocheux <br>
-							Reefback</td>
-						<td>Lance des épines, donne la graine de plante tigre</td>
-					</tr>
-					<tr>
-						<td><img src="images/images_flore/Creepvine_Flora.webp" alt="Vigne d'Orin"><br>
-							Vigne d'Orin</td>
-						<td>Forêts d'Algues</td>
-						<td>Donne l'échantillon de vigne d'Orin et la graine de vigne d'Orin</td>
-					</tr>
-					<tr>
-						<td><img src="images/images_flore/Bloodroot_Flora.webp" alt="Racine de sang"><br>
-							Racine de sang</td>
-						<td>Forêts des Algues Sanguines <br>
-							Grottes des Algues Sanguines</td>
-						<td>Donne l'huile de sang</td>
-					</tr>
-				</table>
-			</article>
-			
-			<!-- Sous-partie 2 -->
-			<article id ="souspartie2">
-				<h3>Flore Terrestre</h3>
-				<table border="1">
-					<tr>
-						<th>Flore</th>
-						<th>Biome</th>
-						<th>Commentaire</th>
-					</tr>
-					<tr>
-						<td><img src="images/images_flore/Bulbo_Tree_Flora.webp" alt="Arbre‑bulbe"><br>
-							Arbre‑bulbe</td>
-						<td>Île Flottante <br>
-							Île Montagneuse</td>
-						<td>Donne l'Échantillon d'Arbre Bulbe</td>
-					</tr>
-					<tr>
-						<td><img src="images/images_flore/Lantern_Tree_Flora.webp" alt="Lanternier"><br>
-							Lanternier</td>
-						<td>Île Flottante</td>
-						<td>Donne le Fruit lanterne</td>
-					</tr>
-					<tr>
-						<td><img src="images/images_flore/Chinese_Potato_Plant_Flora.webp" alt="Plant de patate chinoise"><br>
-							Plant de patate chinoise</td>
-						<td>Île Flottante</td>
-						<td>Donne la Patate chinoise</td>
-					</tr>
-					<tr>
-						<td><img src="images/images_flore/Speckled_Rattler_Flora.webp" alt="Hochet tacheté"><br>
-							Hochet tacheté</td>
-						<td>Île Flottante <br>
-							Île Montagneuse <br>
-							Cache des Escarpements rocheux</td>
-						<td>peut être cueilli ou coupé pour obtenir un Spore de Hochet tacheté</td>
-					</tr>
-				</table>
-			</article>
-			
-			<!-- Sous-partie 3 -->
-			<article id ="souspartie3">
-				<h3>Flore non exploitable</h3>
-				<table border="1">
-					<tr>
-						<th>Flore</th>
-						<th>Biome</th>
-						<th>Commentaire</th>
-					</tr>
-					<tr>
-						<td><img src="images/images_flore/Giant_Cove_Tree_Flora.webp" alt="Arbre de crique géant"><br>
-							Arbre de crique géant</td>
-						<td>Rivière Perdue</td>
-						<td>Décor</td>
-					</tr>
-					<tr>
-						<td><img src="images/images_flore/Anchor_Pods_Flora.webp" alt="Gousse d'ancrage"><br>
-							Gousse d'ancrage</td>
-						<td>Grands Récifs <br>
-							Abysse des Grands Récifs</td>
-						<td>Décor</td>
-					</tr>
-					<tr>
-						<td><img src="images/images_flore/Drooping_Stingers_Flora.webp" alt="Javelon pendu"><br>
-							Javelon pendu</td>
-						<td>Grottes des Forêts d'algues <br>
-							Grottes des Plateaux Herbeux <br>
-							Cavernes des Champi-gelées <br>
-							Grottes des Dunes <br>
-							Grottes des Montagnes</td>
-						<td>empoisonne au contact</td>
-					</tr>
-					<tr>
-						<td><img src="images/images_flore/Blood_Grass_Flora.webp" alt="Herbe sanguine"><br>
-							Herbe sanguine</td>
-						<td>Plateaux Herbeux <br>
-							Reefback</td>
-						<td>Décor</td>
-					</tr>
-				</table>
-			</article>
-		</section>
-	</main>
+	<div class="overlay-container">
+		<!-- Contenu principal -->
+		<main>
+			<!-- Conteneur pour le titre et la date -->
+			<div class="header-title">
+				<h1 class="titre-page">La Flore</h1>
+				<span class="last-modified">Dernière modification : 31 janvier 2025</span>
+			</div>
+			<p>La <strong>Flore</strong> de Subnautica regroupe toutes les plantes natives des <a href="Carte_biomes.html">Biomes</a> de la planète 4546B. 
+			La majorité d'entre elles sont des formes de vie immobiles, restant ancrées à la même place. <br>
+			Le joueur peut scanner la flore à l'aide du Scanner pour obtenir des informations à propos des plantes dans son PDA.</p>
+			<!-- Sommaire -->
+			<details class="sommaire-container" open>
+				<summary class="sommaire-header">
+					<span class="icon">☰</span> <strong>Sommaire</strong>
+				</summary>
+				<nav class="sommaire">
+					<ul>
+						<li><a href="#section1"><strong>1. Répertoire de la flore</strong></a>
+							<ul>
+								<li><a href="#souspartie1">1.1. Flore Aquatique</a></li>
+								<li><a href="#souspartie2">1.2. Flore Terrestre</a></li>
+								<li><a href="#souspartie3">1.3. Flore non exploitable</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</details>
+			<section id ="section1">
+				<h2>Répertoire de la flore</h2>
+				<hr class="style-hr">
+				<p>Bien que la majorité des plantes soient passives ou défensives, il existe certaines exceptions qui constituent un danger pour le joueur, pouvant lui infliger des dégâts à leur contact ou dans un certain rayon d'action. 
+				   La plupart des plantes peuvent être récoltées, cueillies ou cultivées. Certaines servent également de source de nourriture et d’eau.</p>
+				<p>Voici une liste de la flore que vous pourriez rencontrer en explorant les <a href="Carte_biomes.html">Biomes</a> et leur <a href="faune.html">faune</a> dans Subnautica</p>
+				
+				<!-- Sous-partie 1 -->
+				<article id ="souspartie1">
+					<h3>Flore Aquatique</h3>
+					<table class="style-table">
+						<thead>
+							<tr>
+								<th>Flore</th>
+								<th>Biome</th>
+								<th>Commentaire</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><img src="images/images_flore/Acid_Mushroom_Flora.webp" alt="Champignon acide"><br>
+									Champignon acide</td>
+								<td>Bancs Calmes <br>
+									Plateaux Herbeux <br>
+									Grottes des Plateaux Herbeux <br>
+									Forêts des Arbres‑Champignons <br>
+									Dunes <br>
+									Grottes des Dunes</td>
+								<td>Projette de l'acide quand on utilise un couteau, peut être cueilli ou coupé pour obtenir un spore de champignon acide</td>
+							</tr>
+							<tr>
+								<td><img src="images/images_flore/Regress_Shell_Flora.webp" alt="Cornet rouge"><br>
+									Cornet rouge</td>
+								<td>Récifs Clairsemés <br>
+									Abysse des Récifs Clairsemés <br>
+									Grottes des Plateaux Herbeux <br>
+									Cavernes des Pèlerins des Mers <br>
+									Grottes des Montagnes</td>
+								<td>Décor, donne la graine de Cornet Rouge</td>
+							</tr>
+							<tr>
+								<td><img src="images/images_flore/Sea_Crown_Flora.webp" alt="Couronne de mer"><br>
+									Couronne de mer</td>
+								<td>Forêt des Pompons <br>
+									Grottes des Plateaux Herbeux <br>
+									Dunes <br>
+									Grottes des Dunes</td>
+								<td>Décor, donne la graine de couronne de mer</td>
+							</tr>
+							<tr>
+								<td><img src="images/images_flore/Ghost_Weed_Flora.webp" alt="Herbe fantôme"><br>
+									Herbe fantôme</td>
+								<td>Forêts des Algues Sanguines <br>
+									Rivière Perdue <br>
+									Grottes du Champ d'ossements</td>
+								<td>Décor, donne la graine d'herbe fantôme</td>
+							</tr>
+							<tr>
+								<td><img src="images/images_flore/Tiger_Plant_Flora.webp" alt="Plante tigre"><br>
+									Plante tigre</td>
+								<td>Plateaux Herbeux <br>
+									Grottes des Plateaux Herbeux <br>
+									Récifs Clairsemés <br>
+									Abysse des Récifs Clairsemés <br>
+									Escarpements rocheux <br>
+									Reefback</td>
+								<td>Lance des épines, donne la graine de plante tigre</td>
+							</tr>
+							<tr>
+								<td><img src="images/images_flore/Creepvine_Flora.webp" alt="Vigne d'Orin"><br>
+									Vigne d'Orin</td>
+								<td>Forêts d'Algues</td>
+								<td>Donne l'échantillon de vigne d'Orin et la graine de vigne d'Orin</td>
+							</tr>
+							<tr>
+								<td><img src="images/images_flore/Bloodroot_Flora.webp" alt="Racine de sang"><br>
+									Racine de sang</td>
+								<td>Forêts des Algues Sanguines <br>
+									Grottes des Algues Sanguines</td>
+								<td>Donne l'huile de sang</td>
+							</tr>
+						</tbody>
+					</table>
+				</article>
+				
+				<!-- Sous-partie 2 -->
+				<article id ="souspartie2">
+					<h3>Flore Terrestre</h3>
+					<table class="style-table">
+						<thead>
+							<tr>
+								<th>Flore</th>
+								<th>Biome</th>
+								<th>Commentaire</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><img src="images/images_flore/Bulbo_Tree_Flora.webp" alt="Arbre‑bulbe"><br>
+									Arbre‑bulbe</td>
+								<td>Île Flottante <br>
+									Île Montagneuse</td>
+								<td>Donne l'Échantillon d'Arbre Bulbe</td>
+							</tr>
+							<tr>
+								<td><img src="images/images_flore/Lantern_Tree_Flora.webp" alt="Lanternier"><br>
+									Lanternier</td>
+								<td>Île Flottante</td>
+								<td>Donne le Fruit lanterne</td>
+							</tr>
+							<tr>
+								<td><img src="images/images_flore/Chinese_Potato_Plant_Flora.webp" alt="Plant de patate chinoise"><br>
+									Plant de patate chinoise</td>
+								<td>Île Flottante</td>
+								<td>Donne la Patate chinoise</td>
+							</tr>
+							<tr>
+								<td><img src="images/images_flore/Speckled_Rattler_Flora.webp" alt="Hochet tacheté"><br>
+									Hochet tacheté</td>
+								<td>Île Flottante <br>
+									Île Montagneuse <br>
+									Cache des Escarpements rocheux</td>
+								<td>peut être cueilli ou coupé pour obtenir un Spore de Hochet tacheté</td>
+							</tr>
+						</tbody>
+					</table>
+				</article>
+				
+				<!-- Sous-partie 3 -->
+				<article id ="souspartie3">
+					<h3>Flore non exploitable</h3>
+					<table class="style-table">
+						<thead>
+							<tr>
+								<th>Flore</th>
+								<th>Biome</th>
+								<th>Commentaire</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><img src="images/images_flore/Giant_Cove_Tree_Flora.webp" alt="Arbre de crique géant"><br>
+									Arbre de crique géant</td>
+								<td>Rivière Perdue</td>
+								<td>Décor</td>
+							</tr>
+							<tr>
+								<td><img src="images/images_flore/Anchor_Pods_Flora.webp" alt="Gousse d'ancrage"><br>
+									Gousse d'ancrage</td>
+								<td>Grands Récifs <br>
+									Abysse des Grands Récifs</td>
+								<td>Décor</td>
+							</tr>
+							<tr>
+								<td><img src="images/images_flore/Drooping_Stingers_Flora.webp" alt="Javelon pendu"><br>
+									Javelon pendu</td>
+								<td>Grottes des Forêts d'algues <br>
+									Grottes des Plateaux Herbeux <br>
+									Cavernes des Champi-gelées <br>
+									Grottes des Dunes <br>
+									Grottes des Montagnes</td>
+								<td>empoisonne au contact</td>
+							</tr>
+							<tr>
+								<td><img src="images/images_flore/Blood_Grass_Flora.webp" alt="Herbe sanguine"><br>
+									Herbe sanguine</td>
+								<td>Plateaux Herbeux <br>
+									Reefback</td>
+								<td>Décor</td>
+							</tr>
+						<tbody>
+					</table>
+				</article>
+			</section>
+		</main>
+	</div>
 	
 	<!-- Pied de page -->
-    <footer>
-		<br><br><br><br>
-        <p>&copy; L'Encyclopédie Subnautica. Tous droits réservés.</p>
+    <footer class="footer">
+		<p class="footer-top">Créé par Valentin BISIAUX</p>
+		<p class="footer-bottom">&copy; 2025 - L'Encyclopédie Subnautica. Tous droits réservés.</p>
     </footer>
 </body>
 </html>
