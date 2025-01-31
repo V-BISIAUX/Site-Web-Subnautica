@@ -411,6 +411,7 @@ p a:hover {
     color: #aaa;
 }
 
+/* utile uniquement pour la page histoire qui n'est pas complète */
 .footer-page-non-pleine{
 	background-color: #333; /* Fond sombre */
     padding: 20px 10px;
