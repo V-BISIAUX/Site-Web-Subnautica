@@ -15,7 +15,7 @@ l'Encyclopédie Subnautica est un site d'un fan francophone dédié au jeu épon
 
 ## Prérequis
 
-- Un navigateur de recherche (de preférence Firefox)
+- Un navigateur de recherche (de préférence Firefox)
 
 ## Installation
 
