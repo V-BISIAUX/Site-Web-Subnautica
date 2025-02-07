@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<meta charset="UTF-8">
-	<meta name="author" content="Bisiaux Valentin">
+	<meta charset="UTF-8"/>
+	<meta name="author" content="Bisiaux Valentin"/>
 	<title>L'encyclopédie Subnautica | Acceuil</title>
-	<meta name="description" content="Bienvenue sur mon encyclopédie de Subautica, découvrez nos sections informatives et interactives.">
-	<meta name="keywords" content="Subnautica, encyclopédie, faune, flore, carte, biomes">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Police d'écriture Montserrat -->
-	<link rel="stylesheet" href="style.css">
+	<meta name="description" content="Bienvenue sur mon encyclopédie de Subautica, découvrez nos sections informatives et interactives."/>
+	<meta name="keywords" content="Subnautica, encyclopédie, faune, flore, carte, biomes"/>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet"/> <!-- Police d'écriture Montserrat -->
+	<link rel="stylesheet" href="style.css"/>
 	<!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="icon" type="image/png" href="images/icon.png"/>
 </head>
 
-<body class="index-body">
+<body id="top" class="index-body">
 	<!-- En-tête de la page -->
 	<header>
 		<nav class="menu">
 			 <!-- Lien vers la page d'accueil avec une image -->
 			<a href="index.html" class="logo">
-				<img src="images/images_faune/Peeper_Fauna.webp" alt="Logo du site">
+				<img src="images/images_faune/peeper_fauna.webp" alt="Logo du site"/>
 			</a>
 			<!-- Texte à afficher dans le menu -->
 			<div class="menu-container">
 				<span class="site-name">L'encyclopédie Subnautica</span>
 			
 				<ul>
-					<li><a href="index.html">Acceuil</a>
+					<li><a href="index.html">Accueil</a>
 						<ul>
 							<li><a href="index.html#intro">Introduction</a></li>
 							<li><a href="index.html#navigation_générale">Navigation</a></li>
 						</ul>
 					</li>
-					<li><a href="Carte_biomes.html">Monde</a>
+					<li><a href="carte_biomes.html">Monde</a>
 						<ul>
-							<li><a href="Carte_biomes.html">Carte/Biomes</a></li>
+							<li><a href="carte_biomes.html">Carte/Biomes</a></li>
 							<li><a href="faune.html">Faune</a></li>
 							<li><a href="flore.html">Flore</a></li>
 						</ul>
 					</li>
-					<li><a href="histoire.html">histoire</a></li>
+					<li><a href="histoire.html">Histoire</a></li>
 				</ul>
 			</div>
+		</nav>
+		
+		<!-- Bouton pour ouvrir/fermer le menu -->
+		<input type="checkbox" id="menu-toggle" class="menu-toggle"/>
+		<label for="menu-toggle" class="menu-icon">☰</label> <!-- Icône du menu -->
+
+		<!-- Menu latéral -->
+		<nav class="sidebar">
+			<label for="menu-toggle" class="close-button">×</label> <!-- Bouton de fermeture -->
+			<ul>
+				<li><a href="#section1"><strong>1. Introduction</strong></a>
+					<ul class= "submenu">
+						<li><a href="#souspartie1.1">1.1. Résumé de Subnautica</a></li>
+						<li><a href="#souspartie1.2">1.2. Bande Annonce</a></li>
+					</ul>
+				</li>
+				<li><a href="#section2"><strong>2. Navigation</strong></a></li>
+			</ul>
 		</nav>
 	</header>
 	
@@ -49,16 +67,25 @@
 		<main>
 			<!-- Conteneur pour le titre et la date -->
 			<div class="header-title">
-				<h1 class="titre-page">Acceuil</h1>
-				<span class="last-modified">Dernière modification : 31 janvier 2025</span>
+				<h1 class="titre-page">Accueil</h1>
+				<span class="last-modified">Dernière modification : <time datetime="2025-02-07">7 février 2025</time></span>
 			</div>
-			<p>Bienvenue sur <strong>l'Encyclopédie Subnautica</strong>, un site d'un fan francophone dédié au jeu éponyme développé par <strong>Unknown Worlds Entertainment</strong>. </p>
+			<p>Bienvenue sur <strong>l'Encyclopédie Subnautica</strong>, votre référence incontournable pour tout ce qui touche à l'univers fascinant de Subnautica ! Ce site est une véritable passion d'un fan francophone dédié à l'exploration de ce jeu exceptionnel développé par <strong>Unknown Worlds Entertainment</strong>. 
+			   Ici, vous trouverez une mine d'informations détaillées sur les différents aspects du jeu, des biomes mystérieux aux créatures incroyables, en passant par les technologies avancées et l’histoire captivante qui se cache sous les eaux profondes de la planète 4546B.
+			   Que vous soyez un joueur chevronné ou un débutant curieux, cette encyclopédie a été conçue pour enrichir votre expérience, vous offrir des astuces pratiques, des analyses approfondies et des éléments du lore pour vous immerger encore plus dans cet univers sous-marin fascinant. 
+			   Explorez les différentes sections, découvrez des informations inédites, et laissez-vous guider à travers l’histoire palpitante de Subnautica. Prêt à plonger dans cette aventure incroyable ? Nous vous souhaitons une exploration sans fin au cœur de l’océan mystérieux de Subnautica !</p>
 			<p>(de future mises à jour et modifications viendront améliorer et compléter cette encyclopédie)</p>
+			<p>Mise à jour du moment : </p>
+			<ul class="notes">
+				<li>Création d'un menu accessible à tout moment sur le côté de chaque page</li>
+				<li>Amélioration de l'affichage et de la configuration des tableaux</li>
+				<li>Création de la page "Histoire", recensant tous les événements importants de <strong>Subnautica</strong>. (avec leurs sources)</li>
+			</ul>
 			<div class="image-container">
-				<img src="images/logo_acceuil.jpg" alt="Carte de Subnautica">
+				<img src="images/logo_acceuil.jpg" alt="Carte de Subnautica"/>
 			</div>
 			<!-- Sommaire -->
-			<details class="sommaire-container" open>
+			<details class="sommaire-container" open="open">
 				<summary class="sommaire-header">
 					<span class="icon">☰</span> <strong>Sommaire</strong>
 				</summary>
@@ -66,8 +93,8 @@
 					<ul>
 						<li><a href="#section1"><strong>1. Introduction</strong></a>
 							<ul>
-								<li><a href="#souspartie1">1.1. Résumé de Subnautica</a></li>
-								<li><a href="#souspartie2">1.2. Bande Annonce</a></li>
+								<li><a href="#souspartie1.1">1.1. Résumé de Subnautica</a></li>
+								<li><a href="#souspartie1.2">1.2. Bande Annonce</a></li>
 							</ul>
 						</li>
 						<li><a href="#section2"><strong>2. Navigation</strong></a></li>
@@ -76,7 +103,7 @@
 			</details>
 			<section id ="section1">
 				<h2 id="intro">Introduction au monde de Subnautica</h2>
-				<hr class="style-hr">
+				<hr class="style-hr"/>
 				<p><strong>Subnautica</strong> a été créé par <strong>Unknown Worlds Entertainment</strong>, un studio indépendant basé à San Francisco, connu pour ses précédents travaux sur des jeux comme Natural Selection. 
 				   Le développement de <strong>Subnautica</strong> a commencé en 2013, avec une équipe relativement petite, et le jeu a été lancé en accès anticipé en 2014</p>
 				<p>Cette phase a permis aux développeurs de recevoir des retours de la communauté et d'affiner progressivement les mécaniques de jeu, les graphismes et l'expérience de survie sous-marine</p>
@@ -96,21 +123,21 @@
 				<article id="souspartie1.2">
 					<h3>Bande Annonce</h3>
 					<!-- Vidéo -->
-					<video class="video" width="600" controls>
-						<source src="vidéos/Bande_annonce.mp4" type="video/mp4">
+					<video class="video" width="600" controls="controls">
+						<source src="vidéos/bande_annonce.mp4" type="video/mp4"/>
 					</video>
 				</article>
 			</section>
 				
 			<section id="section2">
 				<h2 id="navigation_générale">Navigation</h2>
-				<hr class="style-hr">
+				<hr class="style-hr"/>
 				<!-- Sommaire de la section 2 -->
 				 <div class="navigation-container">
 					<div class="navigation-colonne">
 						<span class="menu-title">Monde</span>
 						<ul>
-							<li><a href="Carte_biomes.html">Carte du cratère et biomes</a></li>
+							<li><a href="carte_biomes.html">Carte du cratère et biomes</a></li>
 							<li><a href="faune.html">Faune</a></li>
 							<li><a href="flore.html">Flore</a></li>
 						</ul>
@@ -129,8 +156,9 @@
 	
 	<!-- Pied de page -->
     <footer class="footer">
+		<p class="footer-back"><a href="#top">↑ Retour en haut</a></p>
 		<p class="footer-top">Créé par Valentin BISIAUX</p>
-		<p class="footer-bottom">&copy; 2025 - L'Encyclopédie Subnautica. Tous droits réservés.</p>
+		<p class="footer-bottom">&#169; 2025 - L'Encyclopédie Subnautica. Tous droits réservés.</p>
     </footer>
 </body>
 </html>

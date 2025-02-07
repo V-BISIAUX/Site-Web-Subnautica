@@ -1,74 +1,245 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<meta charset="UTF-8">
-	<meta name="author" content="Bisiaux Valentin">
+	<meta charset="UTF-8"/>
+	<meta name="author" content="Bisiaux Valentin"/>
 	<title>L'encyclopédie Subnautica | Histoire</title>
-	<meta name="description" content="Bienvenue sur mon encyclopédie de Subautica, découvrez les principaux biômes qui constituent ce jeu.">
-	<meta name="keywords" content="Subnautica, encyclopédie, faune, flore, carte, biomes">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Police d'écriture Montserrat -->
-	<link rel="stylesheet" href="style.css">
+	<meta name="description" content="Bienvenue sur mon encyclopédie de Subautica, découvrez les principaux biômes qui constituent ce jeu."/>
+	<meta name="keywords" content="Subnautica, encyclopédie, faune, flore, carte, biomes"/>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet"/> <!-- Police d'écriture Montserrat -->
+	<link rel="stylesheet" href="style.css"/>
 	<!-- permet d'empêcher de scroller sur la page (temporaire le temps d'ajouter le contenue à la page) -->
-	<style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      height: 100%;
-    }
-	</style>
 	<!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="icon" type="image/png" href="images/icon.png"/>
 </head>
 
-<body class="index-body">
+<body id="top" class="histoire-body">
 	<!-- En-tête de la page -->
 	<header>
 		<nav class="menu">
 			 <!-- Lien vers la page d'accueil avec une image -->
 			<a href="index.html" class="logo">
-				<img src="images/images_faune/Peeper_Fauna.webp" alt="Logo du site">
+				<img src="images/images_faune/peeper_fauna.webp" alt="Logo du site"/>
 			</a>
 			<!-- Texte à afficher dans le menu -->
 			<div class="menu-container">
 				<span class="site-name">L'encyclopédie Subnautica</span>
 			
 				<ul>
-					<li><a href="index.html">Acceuil</a>
+					<li><a href="index.html">Accueil</a>
 						<ul>
 							<li><a href="index.html#intro">Introduction</a></li>
 							<li><a href="index.html#navigation_générale">Navigation</a></li>
 						</ul>
 					</li>
-					<li><a href="Carte_biomes.html">Monde</a>
+					<li><a href="carte_biomes.html">Monde</a>
 						<ul>
-							<li><a href="Carte_biomes.html">Carte/Biomes</a></li>
+							<li><a href="carte_biomes.html">Carte/Biomes</a></li>
 							<li><a href="faune.html">Faune</a></li>
 							<li><a href="flore.html">Flore</a></li>
 						</ul>
 					</li>
-					<li><a href="histoire.html">histoire</a></li>
+					<li><a href="histoire.html">Histoire</a></li>
 				</ul>
 			</div>
 		</nav>
+		
+		<!-- Bouton pour ouvrir/fermer le menu -->
+		<input type="checkbox" id="menu-toggle" class="menu-toggle"/>
+		<label for="menu-toggle" class="menu-icon">☰</label> <!-- Icône du menu -->
+
+		<!-- Menu latéral -->
+		<nav class="sidebar">
+			<label for="menu-toggle" class="close-button">×</label> <!-- Bouton de fermeture -->
+			<ul class= "submenu">
+				<li><a href="#section1"><strong>1. Histoire Pre-Subnautica</strong></a>
+					<ul>
+						<li><a href="#souspartie1.1">1.1. Période des Architects</a></li>
+						<li><a href="#souspartie1.2">1.2. Crash du Mercury II</a></li>
+						<li><a href="#souspartie1.3">1.3. Crash du Degasi</a></li>
+					</ul>
+				</li>
+				<li><a href="#section2"><strong>2. Subnautica</strong></a>
+					<ul>
+						<li><a href="#souspartie2.1">2.1. Crash du l'Aurora</a></li>
+						<li><a href="#souspartie2.2">2.2. Arrivée de Sunbeam</a></li>
+						<li><a href="#souspartie2.3">2.3. Centre de recherche sur les maladies</a></li>
+						<li><a href="#souspartie2.4">2.4. Zone de lave</a></li>
+						<li><a href="#souspartie2.5">2.5. Empereur des mers Léviathan</a></li>
+						<li><a href="#souspartie2.6">2.6. Fusée d'évasion Neptune</a></li>
+					</ul>
+				</li>
+				<li><a href="#section3"><strong>3. Événements non canons</strong></a></li>
+				<li><a href="#section4"><strong>4. Sources</strong></a></li>
+			</ul>
+		</nav>
 	</header>
 	
-	<div class="overlay-container">
+	<div class="overlay-container-histoire">
 		<main>
 			<!-- Conteneur pour le titre et la date -->
 			<div class="header-title">
 				<h1 class="titre-page">Histoire de la planète</h1>
-				<span class="last-modified">Dernière modification : 31 janvier 2025</span>
+				<span class="last-modified">Dernière modification : <time datetime="2025-02-07">7 février 2025</time></span>
 			</div>
-			<p>Cette page doit permettre de vous raconter l'histoire de la planète 4546B.</p>
-			<p>Cette page est encore en cours d'écriture et de développement et sera bientôt disponible.</p>
+			<p>Cette page détaille les événements décrits dans Subnautica et Subnautica : Below Zero dans ce qui est supposé être l'ordre canonique correct. 
+			   Certains joueurs peuvent rencontrer les événements dans un ordre différent, mais l'histoire générale n'en est pas affectée. 
+			   Toutes les informations sont tirées de l'histoire du jeu et des déclarations des développeurs.</p>
+			<!-- Sommaire -->
+			<details class="sommaire-container" open="open">
+				<summary class="sommaire-header">
+					<span class="icon">☰</span> <strong>Sommaire</strong>
+				</summary>
+				<nav class="sommaire">
+					<ul>
+						<li><a href="#section1"><strong>1. Histoire Pre-Subnautica</strong></a>
+							<ul>
+								<li><a href="#souspartie1.1">1.1. Période des Architects</a></li>
+								<li><a href="#souspartie1.2">1.2. Crash du Mercury II</a></li>
+								<li><a href="#souspartie1.3">1.3. Crash du Degasi</a></li>
+							</ul>
+						</li>
+						<li><a href="#section2"><strong>2. Subnautica</strong></a>
+							<ul>
+								<li><a href="#souspartie2.1">2.1. Crash du l'Aurora</a></li>
+								<li><a href="#souspartie2.2">2.2. Arrivée de Sunbeam</a></li>
+								<li><a href="#souspartie2.3">2.3. Centre de recherche sur les maladies</a></li>
+								<li><a href="#souspartie2.4">2.4. Zone de lave</a></li>
+								<li><a href="#souspartie2.5">2.5. Empereur des mers Léviathan</a></li>
+								<li><a href="#souspartie2.6">2.6. Fusée d'évasion Neptune</a></li>
+							</ul>
+						</li>
+						<li><a href="#section3"><strong>3. Événements non canons</strong></a></li>
+						<li><a href="#section4"><strong>4. Sources</strong></a></li>
+					</ul>
+				</nav>
+			</details>
+			<section id ="section1">
+				<h2>Histoire Pre-Subnautica</h2>
+				<hr class="style-hr"/>
+				<p>À un certain moment, les dauphins sur Terre s'éteignent.</p>
+				<p>La société <strong>Alterra</strong> commence comme une startup de fabrication d'armement au milieu du 22ᵉ siècle.</p>
+				<p>Avec le temps, <strong>Alterra</strong> est reconnue comme une trans-gouvernance, remplissant le rôle de fournisseur officiel de la TSF ainsi que l'un des plus grands fournisseurs de technologies pour la fédération.</p>
+				<p>Fortement influencées par les menaces <strong>d'Alterra</strong> de couper l'approvisionnement en armes, les factions en guerre mettent fin aux hostilités durant l'Expansion et signent la Charte.</p>
+				
+				<!-- Sous-partie 1 -->
+				<article id ="souspartie1.1">
+					<h3>Période des Architects</h3>
+					<p><strong>Les Architects</strong> découvrent la bactérie Kharaa sur une planète lointaine lors d'une expansion réseau de routine. Une erreur réseau entraîne l'échec de leur procédure de quarantaine habituelle, provoquant la mort d'au moins 143 milliards d'individus sur leurs mondes centraux. <strong>Les Architects</strong> placent alors leurs mondes sous quarantaine et transportent Kharaa vers des installations de recherche isolées, notamment sur la planète 4546B, afin d'étudier la bactérie et développer un remède.
+					   Ils construisent la Plateforme d'application de la quarantaine, l'Installation de recherche sur les maladies, la Centrale thermique extraterrestre et les Sanctuaires de stockage, tout en commençant la fabrication des Warpers (on ignore si c'était la première fois qu'ils en créaient). On pense également qu'à cette période, <strong>les Architects</strong> découvrent le Fossile de Gargantua et commencent à prélever des échantillons de sa cage thoracique.</p>
+					<p>Une météorite s'écrase sur la planète 4546B, dans le biome des Dunes. Le cratère résultant bloque l'entrée du sanctuaire des <strong>Architects</strong>, et l'impact fait s'effondrer l'un des piliers de la structure.</p>
+					<p><strong>Les Architects</strong> découvrent que l’espèce du <strong>Léviathan Empereur des Mers</strong> produit l’Enzyme 42, un composé complexe offrant une immunité contre Kharaa. Ils construisent l’Installation de Confinement Principal ainsi que les Sanctuaires des Arches Extraterrestres.
+					   Ils capturent également une femelle <strong>Léviathan Empereur des Mers</strong> âgée de 1600 ans ainsi que ses sept œufs et les placent dans l’Installation de Confinement Principal. On pense aussi que, durant cette période, <strong>les Architects</strong> découvrent le Squelette Ancien et construisent le Laboratoire Caché de la Rivière Perdue.</p>
+					<p><strong>Les Architects</strong> placent diverses reliques provenant d'autres races extraterrestres, y compris de l'humanité, dans l'Installation de Confinement Principal.</p>
+					<p>Après avoir testé <strong>le Léviathan Empereur des Mers</strong> encore en vie, <strong>les Architects</strong> découvrent qu’elle est trop âgée pour produire une <strong>Enzyme 42</strong> suffisamment puissante pour servir de remède permanent. Ils se tournent alors vers l’étude de ses œufs, supposant qu’un spécimen plus jeune produirait des enzymes plus efficaces.
+					   <strong>Le Léviathan Empereur des Mers</strong> tente de communiquer télépathiquement avec <strong>les Architects</strong> pour leur expliquer que forcer l’éclosion des œufs ne fonctionnerait pas, mais, selon elle, "ils ne pouvaient pas entendre."</p>
+					<p><strong>Les Architects</strong> dissèquent un œuf de <strong>Léviathan Empereur des Mers</strong> afin d'étudier le fœtus, mais cette procédure entraîne sa mort. Ils placent ensuite un second œuf, ainsi que d'autres œufs d'espèces différentes, dans le laboratoire d'incubation de l'Installation de Confinement Principal pour poursuivre leurs recherches.
+					   Les cinq œufs restants du <strong>Léviathan Empereur des Mers</strong> sont placés dans le Dispositif d'Incubation.</p>
+					<p><strong>Les Architects</strong> emmènent un œuf de Léviathan Dragon des Mers à l'Installation de Recherche sur les Maladies afin d'étudier les conditions d'éclosion des œufs de classe Léviathan. Cependant, le parent du Dragon des Mers retrouve la trace de l'œuf et fonce sur l'installation, la détruisant, mais trouvant la mort peu après.
+					   La destruction de l'installation entraîne la libération de Kharaa sur la planète. En réponse, <strong>les Architects</strong> déclenchent une quarantaine planétaire, activent la Plateforme d'Application de la Quarantaine et interrompent la construction de nouveaux Warpers.</p>
+					<p>Kharaa élimine la majorité des espèces présentes sur la planète, obligeant les ancêtres des espèces modernes à évoluer rapidement pour s'adapter aux changements drastiques de l'écosystème.
+					   L’espèce du <strong>Léviathan Empereur des Mers</strong> est anéantie, son alimentation ayant été éradiquée par Kharaa. Seuls survivent le dernier spécimen encore en vie et ses œufs, protégés dans l’Installation de Confinement Principal.</p>
+					<p><strong>Les Architects</strong> restants évacuent vers les sanctuaires de stockage, se débarrassent de leurs corps et transfèrent leurs consciences dans des bases de données.
+					   On suppose que ceux qui n'ont pas réussi à transférer leur esprit dans les sanctuaires ont été exterminés par Kharaa.</p>
+					<p><strong>Le Léviathan Empereur des Mers</strong> encore en vie entraîne les Peepers à transporter de petites quantités <strong>d’Enzyme 42</strong> à travers les Conduits Aliens afin de la diffuser sur la planète.</p>			
+				</article>
+				
+				<!-- Sous-partie 2 -->
+				<article id="souspartie1.2">
+					<h3>Crash du Mercury II</h3>
+					<p>Quelques décennies avant le crash de <strong>l'Aurora</strong>, le vaisseau Sol Transgov Mercury II est contraint de se poser (relativement intact) par la Plateforme d'Application de la Quarantaine, atterrissant dans les Monts Arctiques.</p>
+					<p>L'équipage effectue des réparations et tente de collecter des échantillons biologiques, mais il est entravé par la faune féroce de la planète 4546B, en particulier par les Vers de Glace.</p>
+					<p>Les membres de l'équipage infectés par la bactérie Kharaa sont mis en quarantaine et laissés derrière eux avec du matériel de survie et des provisions. Le capitaine espère pouvoir les récupérer, mais il n'est pas optimiste quant à leur sort.</p>
+					<p>Au décollage, la Plateforme d'Application de la Quarantaine tire à nouveau sur le Mercury II, cette fois avec un tir direct qui le détruit. Les débris s'écrasent près de l'Île Delta. Tous les survivants sont supposés morts dans les jours qui suivent.</p>
+				</article>
+				
+				<article id="souspartie1.3">
+					<h3>Crash du Degasi</h3>
+					<p>Dix ans avant le crash de <strong>l'Aurora</strong>, la Plateforme d'Application de la Quarantaine abat le Degasi, qui s'écrase sur la planète 4546B.</p>
+					<p>Les survivants du Degasi construisent leurs bases sur l'Île Flottante. Cependant, en raison des fortes pluies et de la persistance de Marguerit, ils se relocalisent dans la Grotte des Champignons Gélatineux, où Marguerit découvre une tablette.</p>
+					<p>Les survivants du Degasi se relocalisent une nouvelle fois dans le Grand Récif Profond, où Bart explique à son père et à Marguerit qu'ils sont infectés par quelque chose qui n'est pas répertorié dans le Databank. Après que Marguerit ait amené un Léviathan Faucheur blessé à la base, un second Léviathan Faucheur, ayant suivi Marguerit, attaque et détruit la base.
+					   Marguerit poursuit la créature, déterminée à la tuer, tandis que Paul suit une lumière qu'il aperçoit (probablement un Envoûteur, et il est supposé avoir été tué par un Calmar-crabe). Bart parvient à échapper à la créature et fuit, probablement vers les Eaux Calmes ou la Zone du Crash, et possiblement l'Île Flottante.</p>
+					<p>Bart parvient à survivre pendant une période indéterminée, réussissant à construire une base sous-marine et un Seamoth. Bien qu'il retourne finalement à l'Île Flottante, où il écrit son dernier enregistrement, il succombe probablement à Kharaa.</p>
+					<p>Marguerit Maida parvient à s'échapper vers le Secteur Zéro, tandis que les autres survivants sont supposés morts.</p>
+				</article>
+			</section>
+			
+			<section id="section2">
+				<h2>Subnautica</h2>
+				<hr class="style-hr"/>
+				<article id="souspartie2.1">
+					<h3>Crash du l'Aurora</h3>
+					<p><strong>L'Aurora</strong> tente d'effectuer une manœuvre de vol en arc dans l'atmosphère de la planète 4546B avec 157 personnes à bord, dans le but de commencer la construction d'une nouvelle porte-phases dans le Bras d'Ariadne. Secretement, <strong>l'Aurora</strong> a également pour mission de localiser l'équipage du Degasi, bien que l'équipage ne s'attende pas à trouver quoi que ce soit.</p>
+					<p>La Plateforme d'Application de la Quarantaine détecte <strong>l'Aurora</strong> et tire sur elle, ce qui provoque son crash sur <strong>4546B</strong>. L'équipage est alors contraint d'évacuer.</p>
+					<p>Entre 29 et 44 personnes parviennent à s'éjecter dans les capsules de sauvetage 1 à 25, mais seulement dix réussissent à atteindre la surface. Il est possible que d'autres capsules aient aussi atteint la surface, mais en dehors du Cratère, probablement succombant aux Léviathans Fantômes qui résident dans le vide. Seule une capsule transportait un passager décédé.
+					   Chaque capsule de sauvetage atterrit dans différents biomes. L'une d'elles, en particulier, est la capsule 5, qui abrite le chef de la maintenance des systèmes non essentiels, <strong>Ryley Robinson</strong>. Il est assommé pendant trois heures par un panneau détaché lors de la descente. Tous les autres membres survivants de l'équipage périssent durant cette période d'inconscience.
+					   (Tout ce qui suit peut être complété dans un ordre différent en jouant au jeu.)</p>
+					<p>Le noyau de propulsion de <strong>l'Aurora</strong> explose.</p>
+				</article>
+				
+				<article id="souspartie2.2">
+					<h3>Arrivée de Sunbeam</h3>
+					<p>Après (probablement) une semaine, le <strong>Sunbeam</strong> capte un signal de détresse et vient secourir Ryley.</p>
+					<p>Le <strong>Sunbeam</strong> envoie les coordonnées de l'Île Montagne, où ils prévoient d'atterrir.</p>
+					<p><strong>Le Sunbeam</strong> est détruit par la Plateforme d'Application de la Quarantaine, que <strong>Ryley</strong> explore ensuite. Il découvre des Tablettes Extraterrestres, la Salle de Contrôle, ainsi que l'emplacement approximatif de l'Installation de Recherche sur les Maladies.</p>
+					<p>Après avoir exploré l'Île Montagne, <strong>Ryley</strong> découvre l'Arche Extraterrestre à l'intérieur et l'active, ce qui le transporte vers l'Île Flottante. Là, il trouve également les bases de données Degasi.</p>
+				</article>
+				
+				<article id="souspartie2.3">
+					<h3>Centre de recherche sur les maladies</h3>
+					<p><strong>Ryley</strong> se rend à l'Installation de Recherche sur les Maladies, où il découvre la nature de Kharaa et se rend compte qu'il est infecté.</p>
+					<p>Après la période d'incubation de Kharaa (deux semaines, à ce moment-là), les coordonnées de la Centrale Thermique Extraterrestre sont reçues.</p>
+				</article>
+				
+				<article id="souspartie2.4">
+					<h3>Zone de lave</h3>
+					<p><strong>Ryley</strong> atteint la Centrale Thermique Extraterrestre et obtient la Tablette Bleue, ainsi que les plans de la Batterie Ionique et de la Cellule d'Énergie Ionique.</p>
+				</article>
+				
+				<article id="souspartie2.5">
+					<h3>Empereur des mers Léviathan</h3>
+					<p><strong>Ryley</strong> atteint l'Installation de Confinement Principal et rencontre le <strong>Léviathan Empereur des Mers</strong>, âgé maintenant de 2600 ans.</p>
+					<p><strong>Le Léviathan Empereur des Mers</strong> communique télépathiquement avec <strong>Ryley</strong> et lui explique que ses œufs doivent éclore pour éradiquer Kharaa.</p>
+					<p><strong>Ryley</strong> fait éclore les œufs après avoir collecté diverses plantes provenant de différents biomes en utilisant les Arches. <strong>Les bébés Léviathans Empereurs des Mers</strong> libèrent la forme stable de <strong>l'Enzyme 42</strong>, connue sous le nom d'Enzyme des Bébés Léviathans. <strong>Ryley</strong> interagit avec les Enzymes et est ainsi guéri.
+					   Après avoir joué avec leur parent, les Bébés quittent l'aquarium en passant par l'Arche derrière l'Incubateur. Leur parent reste derrière, car il est trop grand pour traverser l'Arche, et finit par mourir ici, bien que <strong>Ryley</strong> ne soit jamais témoin de cette scène.</p>
+					<p><strong>Ryley</strong> traverse l'Arche de l'aquarium, qui est connectée à une Arche sur une plateforme suspendue près de la Plateforme d'Application de la Quarantaine. Il entre, et, maintenant guéri, il est capable de désactiver l'arme, ce qui lui permet de s'échapper.</p>
+				</article>
+				
+				<article id="souspartie2.6">
+					<h3>Fusée d'évasion Neptune</h3>
+					<p><strong>Ryley</strong> retourne à <strong>l'Aurora</strong> désormais détruite et obtient les plans de la fusée de secours <strong>Neptune</strong>, qu'il finit par construire.</p>
+					<p>Après être monté à bord de la fusée et l'avoir activée, <strong>Ryley</strong> décolle de la <strong>planète 4546B</strong>. Alors qu'il orbite autour de la planète, <strong>le Léviathan Empereur des Mers</strong> communique une dernière fois avec lui, juste avant qu'il quitte le système pour retourner sur Terre.</p>
+					<p>Il est alors informé que pour atterrir, il doit payer une redevance de 1 000 000 000 000 de crédits qu'il a accumulés en utilisant les ressources de la planète.</p>
+					<p>Après le retour de <strong>Ryley</strong>, la société <strong>Alterra</strong> découvre la valeur que la planète renferme.</p>
+				</article>
+			</section>
+			
+			<section id ="section3">
+				<h2>Événements non canons</h2>
+				<hr class="style-hr"/>
+				<p>Si Ryley désactive la Plateforme d'Application de la Quarantaine avant l'arrivée du Sunbeam, ce dernier survivra, mais ne pourra pas s'approcher de la planète en raison du champ de débris causé par le crash de l'Aurora. Ryley sera alors contraint de construire une fusée de secours de toute façon.</p>
+				<p>Une nouvelle souche de Kharaa évolue avec la capacité de contrôler et altérer la structure des créatures vivantes, entraînant les événements de Natural Selection et Natural Selection 2. (jeux développés par Unknown Worlds)</p>
+			</section>
+			
+			<section id ="section4">
+				<h2>Sources</h2>
+				<hr class="style-hr"/>
+				<ul class="notes">
+					<li><a href="https://subnautica.fandom.com/fr/wiki/Wikia_Subnautica" target="_blank">Wiki Subnautica</a></li>
+					<li><a href="https://subnautica.fandom.com/wiki/Storyline" target="_blank">Storyline de Subnautica</a></li>
+					<li><a href="ressources/informations.pdf" target="_blank">Un pdf sur Subanutica</a></li>
+					<li><a href="https://subnautica.fandom.com/wiki/Storyline#Below_Zero" target="_blank">Découverte de l'histoire de Below Zero</a></li>
+					<li><a href="https://subnautica.fandom.com/wiki/Special:Search?scope=internal&amp;query=below" target="_blank">Découvrir plus d'information sur Subnautica : Below Zero</a></li>
+				</ul>
+			</section>
 		</main>
 	</div>
 
 	<!-- Pied de page -->
-    <footer class="footer-page-non-pleine">
+    <footer class="footer">
+		<p class="footer-back"><a href="#top">↑ Retour en haut</a></p>
 		<p class="footer-top">Créé par Valentin BISIAUX</p>
-		<p class="footer-bottom">&copy; 2025 - L'Encyclopédie Subnautica. Tous droits réservés.</p>
+		<p class="footer-bottom">&#169; 2025 - L'Encyclopédie Subnautica. Tous droits réservés.</p>
     </footer>
 </body>
 </html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="author" content="Bisiaux Valentin"/>
+	<title>L'encyclopédie Subnautica | Carte</title>
+	<meta name="description" content="Bienvenue sur mon encyclopédie de Subautica, découvrez les principaux biômes qui constituent ce jeu."/>
+	<meta name="keywords" content="Subnautica, encyclopédie, faune, flore, carte, biomes"/>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet"/> <!-- Police d'écriture Montserrat -->
+	<link rel="stylesheet" href="style.css"/>
+	<!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/icon.png"/>
+</head>
+
+<body id="top" class="carte-body">
+	<!-- En-tête de la page -->
+	<header>
+		<nav class="menu">
+			 <!-- Lien vers la page d'accueil avec une image -->
+			<a href="index.html" class="logo">
+				<img src="images/images_faune/peeper_fauna.webp" alt="Logo du site"/>
+			</a>
+			<!-- Texte à afficher dans le menu -->
+			<div class="menu-container">
+				<span class="site-name">L'encyclopédie Subnautica</span>
+			
+				<ul>
+					<li><a href="index.html">Accueil</a>
+						<ul>
+							<li><a href="index.html#intro">Introduction</a></li>
+							<li><a href="index.html#navigation_générale">Navigation</a></li>
+						</ul>
+					</li>
+					<li><a href="carte_biomes.html">Monde</a>
+						<ul>
+							<li><a href="carte_biomes.html">Carte/Biomes</a></li>
+							<li><a href="faune.html">Faune</a></li>
+							<li><a href="flore.html">Flore</a></li>
+						</ul>
+					</li>
+					<li><a href="histoire.html">Histoire</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+		<!-- Bouton pour ouvrir/fermer le menu -->
+		<input type="checkbox" id="menu-toggle" class="menu-toggle"/>
+		<label for="menu-toggle" class="menu-icon">☰</label> <!-- Icône du menu -->
+
+		<!-- Menu latéral -->
+		<nav class="sidebar">
+			<label for="menu-toggle" class="close-button">×</label> <!-- Bouton de fermeture -->
+			<ul>
+				<li><a href="#section1"><strong>1. Répertoire des biomes</strong></a>
+					<ul class= "submenu">
+						<li><a href="#souspartie1">1.1. Surface</a></li>
+						<li><a href="#souspartie2">1.2. Îles</a></li>
+						<li><a href="#souspartie3">1.3. Profondeur</a></li>
+					</ul>
+				</li>
+				<li><a href="#section2"><strong>2. Notes</strong></a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="overlay-container">
+		<main>
+			<!-- Conteneur pour le titre et la date -->
+			<div class="header-title">
+				<h1 class="titre-page">Carte et biomes</h1>
+				<span class="last-modified">Dernière modification : <time datetime="2025-02-07">7 février 2025</time></span>
+			</div>
+			<p>Subnautica propose un large éventaille de <strong>biomes</strong> à explorer et avec lesquels il faudra apprendre à coexister.
+			   Chaque biome contient son propre ensemble de <a href="faune.html">faune</a> et de <a href="flore.html">flore</a> à découvrir et de ressources à récolter pour se développer.</p>
+			<p>La <strong>Carte du Cratère</strong> est l'ensemble de la géographie et des <strong>biomes</strong> du Cratère, espace dans lequel évolue le jeu Subnautica :</p>
+			<div class="image-container">
+				<img src="images/carte_du_cratère.webp" alt="Carte de Subnautica"/>
+			</div>
+			<!-- Sommaire -->
+			<details class="sommaire-container" open="open">
+				<summary class="sommaire-header">
+					<span class="icon">☰</span> <strong>Sommaire</strong>
+				</summary>
+				<nav class="sommaire">
+					<ul>
+						<li><a href="#section1"><strong>1. Répertoire des biomes</strong></a>
+							<ul>
+								<li><a href="#souspartie1">1.1. Surface</a></li>
+								<li><a href="#souspartie2">1.2. Îles</a></li>
+								<li><a href="#souspartie3">1.3. Profondeur</a></li>
+							</ul>
+						</li>
+						<li><a href="#section2"><strong>2. Notes</strong></a></li>
+					</ul>
+				</nav>
+			</details>
+			<section id ="section1">
+				<h2>Répertoire des biomes</h2>
+				<hr class="style-hr"/>
+				
+				<!-- Sous-partie 1 -->
+				<article id ="souspartie1">
+					<h3>Surface</h3>
+					<table class="style-table">
+						<thead>
+							<tr>
+								<th>Biome</th>
+								<th>Profondeurs</th>
+								<th>Gangues de minerai</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><img src="images/image_biome/bancs_calmes.webp" alt="Bancs calmes"/>
+									<p>Bancs calmes</p>
+								</td>
+								<td>
+									<ul>
+										<li>0 - 80 mètres</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>Affleurements de Calcaire</li>
+										<li>Affleurements de Grès</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td><img src="images/image_biome/kelp_forest_biome.webp" alt="Forêts d'algues"/>
+									<p>Forêts d'algues</p>
+								</td>
+								<td>
+									<ul>
+										<li>0 - 160 mètres</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>Affleurements de Calcaire</li>
+										<li>Affleurements de Grès</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td><img src="images/image_biome/grassy_plateaus_biome.webp" alt="Plateaux herbeux"/>
+									<p>Plateaux herbeux</p>
+								</td>
+								<td>
+									<ul>
+										<li>50 - 170 mètres</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>Affleurements de Calcaire</li>
+										<li>Affleurements de Grès</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td><img src="images/image_biome/foret_champignons.webp" alt="Forêts des Arbres Champignons"/>
+									<p>Forêts des Arbres Champignons</p>
+								</td>
+								<td>
+									<ul>
+										<li>75 - 250 mètres (Nord-Ouest)</li>
+										<li>125 - 200 mètres (Nord-Est)</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>Affleurements de Calcaire</li>
+										<li>Pommes de pin violettes</li>
+										<li>Affleurements de Grès</li>
+										<li>Affleurements de Schiste</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td><img src="images/image_biome/foret_algues_sanguines.webp" alt="Forêts des Algues sanguines"/>
+									<p>Forêts des Algues sanguines</p>
+								</td>
+								<td>
+									<ul>
+										<li>150 - 675 mètres (Tranchée)</li>
+										<li>200 - 580 mètres (Nord)</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>Affleurements de Schiste</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td><img src="images/image_biome/grand_reef_biome.webp" alt="Grand Récif"/>
+									<p>Grand Récif</p>
+								</td>
+								<td>
+									<ul>
+										<li>150 - 480 mètres</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>Affleurements de Schiste</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td><img src="images/image_biome/zone_morte.webp" alt="Zone morte"/>
+									<p>Zone morte</p>
+								</td>
+								<td>
+									<ul>
+										<li>0 - 3000 mètres</li>
+									</ul>
+								</td>
+								<td class="cellule-vide">-</td>
+							</tr>
+						</tbody>
+					</table>
+				</article>
+				
+				<!-- Sous-partie 2 -->
+				<article id="souspartie2">
+					<h3>Îles</h3>
+					<table class="style-table">
+						<thead>
+							<tr>
+								<th>Biome</th>
+								<th>Profondeurs</th>
+								<th>Gangues de minerai</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><img src="images/image_biome/floating_island.webp" alt="Île flottante"/>
+									<p>Île flottante</p>
+								</td>
+								<td>
+									<ul>
+										<li>Au dessus du niveau de la mer</li>
+									</ul>
+								</td>
+								<td class="cellule-vide">-</td>
+							</tr>
+							<tr>
+								<td><img src="images/image_biome/ile_montagneuse.webp" alt="Île montagneuse"/>
+									<p>Île montagneuse</p>
+								</td>
+								<td>
+									<ul>
+										<li>Au dessus du niveau de la mer</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>Affleurements de Grès</li>
+										<li>Affleurements de Schiste</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</article>
+				
+				<!-- Sous-partie 3 -->
+				<article id="souspartie3">
+					<h3>Profondeur</h3>
+					<table class="style-table">
+						<thead>
+							<tr>
+								<th>Biome</th>
+								<th>Profondeurs</th>
+								<th>Gangues de minerai</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><img src="images/image_biome/cavernes-champi_gelees.webp" alt="Cavernes des Champi-gelées"/>
+									<p>Cavernes des Champi-gelées</p>
+								</td>
+								<td>
+									<ul>
+										<li>180 - 300 mètres</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>Affleurements de Grès</li>
+										<li>Affleurements de Schiste</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td><img src="images/image_biome/deep_grand_reef.webp" alt="Abysses du Grand Récif"/>
+									<p>Abysses du Grand Récif</p>
+								</td>
+								<td>
+									<ul>
+										<li>425 - 630 mètres</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>Pommes de pin violettes</li>
+										<li>Affleurements de Schiste</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td><img src="images/image_biome/lost_river.webp" alt="Rivière perdue"/>
+									<p>Rivière perdue</p>
+								</td>
+								<td>
+									<ul>
+										<li>550 - 1000 mètres</li>
+									</ul>
+								</td>
+								<td class="cellule-vide">-</td>
+							</tr>
+							<tr>
+								<td><img src="images/image_biome/lacs_lave.webp" alt="Lacs de lave"/>
+									<p>Lacs de lave</p>
+								</td>
+								<td>
+									<ul>
+										<li>1300 - 1700 mètres</li>
+									</ul>
+								</td>
+								<td class="cellule-vide">-</td>
+							</tr>
+						</tbody>
+					</table>
+				</article>
+			</section>
+			
+			<section id="section2">
+				<h2>Notes</h2>
+				<hr class="style-hr"/>
+				<ul class="notes">
+					<li>Les premières étapes du développement des biomes peuvent être explorées dans une playlist YouTube de Russel Maekim.</li>
+					<li>Les Lacs de Lave et la Zone Morte sont les seuls biomes ne contenant aucune <a href="flore.html">flore</a>.</li>
+					<li>Les premiers concepts de biomes des zones de Lave ont été subdivisés en différentes catégories : Zones de Lave, Ponts de Lave, Zones de Lave Inactives, et Cheminées Volcaniques.</li>
+				</ul>
+			</section>
+		</main>
+	</div>
+
+	<!-- Pied de page -->
+    <footer class="footer">
+		<p class="footer-back"><a href="#top">↑ Retour en haut</a></p>
+		<p class="footer-top">Créé par Valentin BISIAUX</p>
+		<p class="footer-bottom">&#169; 2025 - L'Encyclopédie Subnautica. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
